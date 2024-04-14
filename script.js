@@ -37,8 +37,50 @@ document.getElementById("submit-btn").addEventListener("click", function(event) 
                   });
               
                   const result = await response.json();
-                  console.log("Success:", result);
+                   const poemText = result.response.response;
+                   // Extracting title using regular expression
+                    var titleMatch = poemText.match(/Title: "(.*?)"/);
+                    var title = titleMatch ? titleMatch[1] : null;
+                     document.querySelector('h1').textContent=title;
+                    // Extracting poem content
+                    var poemContent = poemText.replace(titleMatch[0], '').trim();
+                    document.querySelector('#poem-text').textContent = poemContent;
+                    getImage(title);
                 } catch (error) {
                   console.error("Error:", error);
                 }
               }
+
+           // Make a GET request to the API endpoint
+    // Make a GET request to the API endpoint
+    function getImage(title){
+    var title = {
+      prompt:`"${title}"`,
+    };
+    fetch('https://poem-image-gen.aadarshkannan111.workers.dev/',{
+        method: "POST",
+        body: JSON.stringify(title),
+    })
+      .then(response => {
+        // Check if the response is successful
+        if (!response.ok) {
+          throw new Error('Network response was not ok');
+        }
+        // Parse the response as binary data (blob)
+        return response.blob();
+      })
+      .then(blob => {
+        // Create a URL for the blob
+        const imageUrl = URL.createObjectURL(blob);
+
+        // Set the src attribute of the image element to display the image
+        const img = document.getElementById('poem-img');
+        img.src = imageUrl;
+      })
+      .catch(error => {
+        console.error('There was a problem with the fetch operation:', error);
+      });
+    }
+
+              
+              
