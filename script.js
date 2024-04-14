@@ -42,5 +42,3 @@ document.getElementById("submit-btn").addEventListener("click", function(event) 
                   console.error("Error:", error);
                 }
               }
-              
-              
