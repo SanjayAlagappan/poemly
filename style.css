@@ -1,0 +1,144 @@
+*{
+
+    font-family: "Kalam", cursive;
+    box-sizing: border-box;
+    margin: unset;
+    padding: unset;
+}
+header a{
+  text-decoration: none;
+  color:unset;
+}
+header a:hover{
+    text-decoration: underline;
+    color:unset;
+  }
+#logo{
+    font-size: 30px;
+    font-weight: 600;
+    padding:0 60px 0 0;
+}
+#header-wrapper{
+    display: flex;
+    align-items: center;
+    margin: 0 auto;
+    width: 100%;
+    padding:20px 30px;
+    border: 1px solid black;
+}
+header li{
+    font-size: 17px;
+    font-weight: 400;
+}
+header ul{
+    list-style: none;
+    display: flex;
+    align-items: center;
+    gap: 30px;
+}
+
+.poemly-prompt-container form{
+    margin: 0 auto;
+}
+#poemly-wrapper{
+    max-width: 920px;
+    border: 1px solid black;
+    margin: 100px auto;
+    display: flex;
+    border-radius: 10px;
+    position: relative;
+}
+.poemly-container .container{
+    width: 50%;
+}
+form ul,.poem-wrapper{
+    width: 70%;
+    margin: 0 auto;
+}
+.poemly-prompt-container input,.poemly-prompt-container select{
+    width: 100%;
+    padding:10px;
+    border-radius:6px;
+}
+.poemly-container input{
+    border: rgb(118, 118, 118) 1px solid;
+}
+form ul{
+    list-style: none;
+}
+.poemly-prompt-container{
+    border-right: 1px solid black;
+    padding:100px 0 40px; 
+}
+.poemly-response-container{
+    padding:40px 0;
+}
+form ul li{
+    padding: 0 0  36px 0;
+}
+.poemly-poem-title-wrapper{
+    display: flex;
+    gap: 40px;
+}
+#submit button{
+    padding: 10px;
+    margin: 40px 0 0;
+    cursor: pointer;
+}
+
+#poem-text{
+  border: 1px solid black;
+  height: 350px;
+  padding:30px;
+  margin: 30px 0 0;
+  border-radius: 10px;
+}
+
+#save-button{
+    position: absolute;
+    bottom: -80px;
+    right: 0;
+    cursor:pointer;
+}
+#save-button button
+{
+    padding:10px;
+}
+
+/* Explore page style starts */
+
+.card {
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    padding: 20px;
+    margin-bottom: 20px;
+    background-color: #f9f9f9;
+    max-width: 300px;
+}
+
+/* Loader styles */
+.loader {
+    border: 8px solid #f3f3f3;
+    border-top: 8px solid #3498db;
+    border-radius: 50%;
+    width: 50px;
+    height: 50px;
+    animation: spin 1s linear infinite;
+    margin: 0 auto;
+    margin-top: 50px;
+}
+
+@keyframes spin {
+    0% { transform: rotate(0deg); }
+    100% { transform: rotate(360deg); }
+}
+
+#poem-gallery-wrapper{
+   max-width: 920px;
+   display: flex;
+   flex-wrap: wrap;
+   justify-content: center;
+   gap: 30px;
+   margin: 60px auto;
+}
+/* Explore page Style ends */

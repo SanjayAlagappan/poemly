@@ -1,0 +1,84 @@
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+     <link rel="stylesheet" href="style.css">
+     <link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Kalam:wght@300;400;700&display=swap" rel="stylesheet">
+</head>
+<body>
+    <header>
+        <div id="header-wrapper">
+        <div id="logo">Poemly</div>
+        <ul>
+            <li><a href="./explore.html">Explore</a></li>
+        </ul>
+    </div>
+     </header>
+    <main>
+        <div class="poemly-container">
+            <div id="poemly-wrapper">
+            <div class="container poemly-prompt-container">
+              <form>
+                <ul>
+                <li>
+                    <input type="text" placeholder="type in your prompt here">
+                </li>
+                <li>
+                    <select name="length of the poem" id="">
+                        <option value="">Length of poem</option>
+                        <option value="short">Short</option>
+                        <option value="medium">Medium</option>
+                        <option value="long">Long</option>
+                    </select>
+                </li>
+                <li>
+                    <select name="Tone of poem" id="">
+                        <option value="">Tone of poem</option>
+                        <option value="romantic">romantic</option>
+                        <option value="melancholic">melancholic</option>
+                    </select>
+                </li>
+                <li>
+                   <select name="Poem style or form" id="">
+                    <option value="">Poem Style or form</option>
+                     <option value="free verse">Narrative</option>
+                     <option value="sonnet">Dramatic</option>
+                     <option value="haiku">Lyric</option>
+                   </select>
+                </li>
+                <li id="submit" style="text-align: center;"> <button id="submit-btn">Generate your poem</button></li>
+                </ul>
+               
+              </form>
+            </div>
+            <div class="container poemly-response-container">
+                <div class="poem-wrapper">
+                 <div class="poemly-poem-title-wrapper">
+                    <img src="https://placehold.co/80x80" alt="">
+                    <h1>Your Poem Title Here!</h1>
+                 </div>
+                 <div class="poem-response">
+                    <div  class="poemly-line">
+                        <p id="poem-text">
+                            Your poem goes here.
+                        </p>
+                    </div>
+                 </div>
+                </div>
+            </div>
+            <div id="save-button">
+                <button>Save to Gallery</button>
+            </div>
+        </div>
+        
+    </div>
+    </main>
+
+
+    
+    <script src="./script.js"></script>
+</body>
+</html>
