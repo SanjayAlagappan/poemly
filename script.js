@@ -27,7 +27,7 @@ document.getElementById("submit-btn").addEventListener("click", function(event) 
     };
     
     // Fetch request to the endpoint
-    fetch('https://test-ai.aadarshkannan111.workers.dev/', {
+    fetch('https://poemly-middleware.onrender.com/api', {
         method: 'POST',
         headers: {
             'Content-Type': 'application/json'
@@ -38,7 +38,9 @@ document.getElementById("submit-btn").addEventListener("click", function(event) 
         if (!response.ok) {
             throw new Error('Network response was not ok');
         }
+        console.log(response.json());
         return response.json();
+        
     })
     .then(data => {
         console.log('Response from server:', data);
