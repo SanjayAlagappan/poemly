@@ -4,8 +4,7 @@ let submit_button = document.querySelector('#submit-btn');
 
 document.getElementById("submit-btn").addEventListener("click", function(event) {
     event.preventDefault(); // Prevent form submission for now
-        // Show loading spinner
-      document.getElementById('loading-spinner').style.display = 'block';
+
     // Get the form elements
     var promptInput = document.querySelector("input[type='text']");
     var lengthSelect = document.querySelector("select[name='length of the poem']");
@@ -25,6 +24,7 @@ document.getElementById("submit-btn").addEventListener("click", function(event) 
         tone: toneSelect.value,
         style: styleSelect.value
     };
+    
     getJSON(data);
     
 });
