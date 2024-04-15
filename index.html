@@ -2,7 +2,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
+    <title>Poemly | Your Personal Poet Powered by AI</title>
      <link rel="stylesheet" href="style.css">
      <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
@@ -12,9 +12,6 @@
     <header>
         <div id="header-wrapper">
         <div id="logo">Poemly</div>
-        <ul>
-            <li><a href="./explore.html">Explore</a></li>
-        </ul>
     </div>
      </header>
     <main>
@@ -28,7 +25,7 @@
                 </li>
                 <li>
                     <select name="length of the poem" id="">
-                        <option value="">Length of poem</option>
+                        <option value="" disabled selected>Length of poem</option>
                         <option value="short">Short</option>
                         <option value="medium">Medium</option>
                         <option value="long">Long</option>
@@ -36,20 +33,27 @@
                 </li>
                 <li>
                     <select name="Tone of poem" id="">
-                        <option value="">Tone of poem</option>
-                        <option value="romantic">romantic</option>
-                        <option value="melancholic">melancholic</option>
+                        <option value="" disabled selected>Tone of Poem</option>
+                        <option value="romantic">Romantic</option>
+                        <option value="joyful">Joyful</option>
+                        <option value="sorrowful">Sorrowful</option>
+                        <option value="nostalgic">Nostalgic</option>
+                        <option value="satirical">Satirical</option>
+                        <option value="reflective">Reflective</option>
                     </select>
                 </li>
-                <li>
+                <li id="ddown">
                    <select name="Poem style or form" id="">
-                    <option value="">Poem Style or form</option>
-                     <option value="free verse">Narrative</option>
-                     <option value="sonnet">Dramatic</option>
-                     <option value="haiku">Lyric</option>
+                    <option value="" disabled selected>Poem Style or form</option>
+                    <option value="narrative">Narrative</option>
+                    <option value="sonnet">Sonnet</option>
+                    <option value="limerick">Limerick</option>
+                    <option value="villanelle">Villanelle</option>
+                    <option value="sestina">Sestina</option>
+                    <option value="haiku">Haiku</option>
                    </select>
                 </li>
-                <li id="submit" style="text-align: center;"> <button id="submit-btn">Generate your poem</button></li>
+                <li id="submit" style="text-align: center;"> <button type="button" id="submit-btn">Generate your poem</button></li>
                 </ul>
                
               </form>
@@ -68,9 +72,6 @@
                     </div>
                  </div>
                 </div>
-            </div>
-            <div id="save-button">
-                <button>Save to Gallery</button>
             </div>
         </div>
         
