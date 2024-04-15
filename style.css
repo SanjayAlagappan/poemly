@@ -1,3 +1,6 @@
+@import url('https://fonts.googleapis.com/css2?family=Kanit&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Acme&display=swap');
+
 *{
 
     font-family: "Kalam", cursive;
@@ -5,9 +8,15 @@
     margin: unset;
     padding: unset;
 }
+
+body {
+    background-color: #F1F6F4;
+    color: #172B36;
+}
+
 header a{
-  text-decoration: none;
-  color:unset;
+    text-decoration: none;
+    color:unset;
 }
 header a:hover{
     text-decoration: underline;
@@ -56,6 +65,7 @@ form ul,.poem-wrapper{
     margin: 0 auto;
 }
 .poemly-prompt-container input,.poemly-prompt-container select{
+    font-family: "Kanit", sans-serif;
     width: 100%;
     padding:10px;
     border-radius:6px;
@@ -81,7 +91,11 @@ form ul li{
     gap: 40px;
     align-items: center;
 }
+select{
+    cursor: pointer;
+}
 #submit button{
+    font-family: "Acme", sans-serif;
     padding: 10px;
     margin: 40px 0 0;
     cursor: pointer;
@@ -89,7 +103,8 @@ form ul li{
 #poem-img{
     width: 100px;
     height: 100px;
-}
+}   
+
 #poem-text{
   border: 1px solid black;
   height: 350px;
@@ -99,16 +114,6 @@ form ul li{
   overflow-y: scroll;
 }
 
-#save-button{
-    position: absolute;
-    bottom: -80px;
-    right: 0;
-    cursor:pointer;
-}
-#save-button button
-{
-    padding:10px;
-}
 
 /* Explore page style starts */
 
