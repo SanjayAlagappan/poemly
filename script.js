@@ -4,7 +4,8 @@ let submit_button = document.querySelector('#submit-btn');
 
 document.getElementById("submit-btn").addEventListener("click", function(event) {
     event.preventDefault(); // Prevent form submission for now
-    
+        // Show loading spinner
+      document.getElementById('loading-spinner').style.display = 'block';
     // Get the form elements
     var promptInput = document.querySelector("input[type='text']");
     var lengthSelect = document.querySelector("select[name='length of the poem']");
@@ -28,7 +29,6 @@ document.getElementById("submit-btn").addEventListener("click", function(event) 
     
 });
 
-
             async function getJSON(data) {
                 try {
                   const response = await fetch("https://test-ai.aadarshkannan111.workers.dev/", {
@@ -45,7 +45,8 @@ document.getElementById("submit-btn").addEventListener("click", function(event) 
                     // Extracting poem content
                     var poemContent = poemText.replace(titleMatch[0], '').trim();
                     document.querySelector('#poem-text').textContent = poemContent;
-                    getImage(title);
+
+                    getImage(data.prompt);
                 } catch (error) {
                   console.error("Error:", error);
                 }
@@ -53,13 +54,13 @@ document.getElementById("submit-btn").addEventListener("click", function(event) 
 
            // Make a GET request to the API endpoint
     // Make a GET request to the API endpoint
-    function getImage(title){
-    var title = {
-      prompt:`"${title}"`,
+    function getImage(img_query){
+    var img_gen_query = {
+      prompt:`"${img_query}"`,
     };
     fetch('https://poem-image-gen.aadarshkannan111.workers.dev/',{
         method: "POST",
-        body: JSON.stringify(title),
+        body: JSON.stringify(img_gen_query),
     })
       .then(response => {
         // Check if the response is successful
@@ -81,6 +82,3 @@ document.getElementById("submit-btn").addEventListener("click", function(event) 
         console.error('There was a problem with the fetch operation:', error);
       });
     }
-
-              
-              
